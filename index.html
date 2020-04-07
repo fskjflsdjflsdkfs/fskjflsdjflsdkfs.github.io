@@ -2,21 +2,110 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body style="background: pink; text-align: center;">
-    <a href="tg://resolve?domain=raketapazhilaya" style="color: white; font-family: 'Courier'; font-size: 24px;">i miss you, honey</a>
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <style>
+      body {
+        background: rgba(255, 192, 203, 0.33);
+        text-align: center;
+        color: pink;
+        font-family: 'Courier';
+        font-size: 24px;
+        user-select: none;
+      }
 
-       ym(61733536, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-       });
+      .container {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .seal {
+        width: 150px;
+        cursor: pointer;
+      }
+
+      .text {
+        margin: 15px 0 30px;
+      }
+
+      .link {
+        color: rgba(255, 192, 203, 0.33);
+        font-size: 16px;
+      }
+
+      .link.visible {
+        animation: link 0.5s ease-in-out infinite;
+      }
+
+      @keyframes link {
+        0% {
+          color: rgba(255, 192, 203, 0.33);
+        }
+        50% {
+          color: pink;
+        }
+        100% {
+          color: rgba(255, 192, 203, 0.33);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="/seal.svg" alt="" class="seal" />
+      <div class="text">
+        i'm just a lonely pink seal,<br />
+        nothing interesting to see here
+      </div>
+      <a href="tg://resolve?domain=raketapazhilaya" class="link"
+        >i really miss you, please call me</a
+      >
+    </div>
+    <script>
+      document.querySelector('.seal').addEventListener('click', () => {
+        document.querySelector('.link').classList.add('visible');
+      });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/61733536" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        'script',
+        'https://mc.yandex.ru/metrika/tag.js',
+        'ym'
+      );
+
+      ym(61733536, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/61733536"
+          style="position: absolute; left: -9999px;"
+          alt=""
+        /></div
+    ></noscript>
   </body>
 </html>
